@@ -26,7 +26,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('euskadi31_crawler_detect');
+        $treeBuilder->root('euskadi31_crawler_detect');
 
         return $treeBuilder;
     }
