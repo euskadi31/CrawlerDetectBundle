@@ -11,6 +11,7 @@
 namespace Euskadi31\Bundle\CrawlerDetectBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
@@ -36,8 +37,9 @@ class Euskadi31CrawlerDetectExtension extends Extension
         $loader->load('services.yml');
 
         $definition = new Definition('%euskadi31.crawler.detect.service.class%', [
-            new Reference('request')
+            new Reference('request', ContainerInterface::NULL_ON_INVALID_REFERENCE, false)
         ]);
+
         $container->setDefinition('euskadi31_crawler_detect.service', $definition);
         $container->setAlias('crawler.detect', 'euskadi31_crawler_detect.service');
     }

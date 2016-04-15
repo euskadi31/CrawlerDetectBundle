@@ -39,7 +39,7 @@ class Euskadi31CrawlerDetectExtensionTest extends \PHPUnit_Framework_TestCase
         $this->extension = new Euskadi31CrawlerDetectExtension();
         $this->container = new ContainerBuilder();
         $this->container->register('event_dispatcher', new EventDispatcher());
-        $this->container->register('request', new Request([], [], [], [], [], $_SERVER));
+        $this->container->register('request', new Request([], [], [], [], [], $_SERVER))->setSynchronized(true);
         $this->container->registerExtension($this->extension);
         $this->container->setParameter('kernel.debug', true);
     }
