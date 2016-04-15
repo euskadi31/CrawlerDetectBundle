@@ -1,0 +1,29 @@
+{
+    "name": "euskadi31/crawler-detect-bundle",
+    "description": "A Symfony 2 crawler detect bundle",
+    "type": "library",
+    "keywords": ["crawler", "detect", "bundle", "symfony"],
+    "require": {
+        "php": ">=5.5",
+        "symfony/framework-bundle": "~2.1",
+        "jaybizzle/crawler-detect": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable",
+        "leaphub/phpcs-symfony2-standard": "2.0.1",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Axel Etcheverry",
+            "email": "axel@etcheverry.biz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Euskadi31\\Bundle\\CrawlerDetectBundle\\": "src/",
+            "Euskadi31\\Bundle\\CrawlerDetectBundle\\Tests\\": "tests/"
+        }
+    }
+}

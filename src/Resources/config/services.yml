@@ -1,0 +1,3 @@
+parameters:
+    euskadi31.crawler.detect.service.class: Euskadi31\Bundle\CrawlerDetectBundle\Service\CrawlerDetectService
+services:

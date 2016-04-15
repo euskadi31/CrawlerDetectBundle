@@ -1,0 +1,9 @@
+# directories
+vendor/
+build/
+
+# files
+composer.phar
+composer.lock
+.tags
+.tags_sorted_by_file
